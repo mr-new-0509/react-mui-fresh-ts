@@ -3,7 +3,7 @@
 ## Contact info
 - **Email:** mr.new0509@gmail.com
 - **Telegram:** [@mrnew0509](https://t.me/mrnew0509)
-- **Skype:** sin085(https://join.skype.com/invite/xat3AgpiRVOI)
+- **Skype:** [@sin085](https://join.skype.com/invite/xat3AgpiRVOI)
 
 ## Release date
 July 12, 2022
