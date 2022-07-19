@@ -6,9 +6,10 @@ import CarouselControlArrows from './CarouselControlArrows';
 /* -------------------------------------------------------------- */
 
 interface IProps {
-  data: Array<object>,
-  slideSettings: object,
-  carouselItemComponent: React.ComponentType<{ key: number, dataItem: object }>
+  data: Array<object>;
+  slideSettings: object;
+  carouselItemComponent: React.ComponentType<{ key: number, dataItem: object }>;
+  arrowsVisible: boolean;
 }
 
 /* -------------------------------------------------------------- */
@@ -19,7 +20,7 @@ const RootStyle = styled('div')(({ theme }) => ({
 
 /* -------------------------------------------------------------- */
 
-export default function Carousel({ data, slideSettings, carouselItemComponent }: IProps) {
+export default function Carousel({ data, slideSettings, carouselItemComponent, arrowsVisible = true }: IProps) {
   const carouselRef = useRef<Slider>(null);
 
   const handlePrevious = () => {
@@ -40,7 +41,9 @@ export default function Carousel({ data, slideSettings, carouselItemComponent }:
           })
         ))}
       </Slider>
-      <CarouselControlArrows onNext={handleNext} onPrevious={handlePrevious} />
+      {
+        arrowsVisible && (<CarouselControlArrows onNext={handleNext} onPrevious={handlePrevious} />)
+      }
     </RootStyle>
   );
 }
